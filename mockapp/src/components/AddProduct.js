@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withContext from "../withContext";
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from 'axios';
 
 const initState = {
@@ -57,7 +57,7 @@ class AddProduct extends Component {
     const { user } = this.props.context;
 
     return !(user && user.accessLevel < 1) ? (
-      <Navigate to="/" />
+      <Redirect to="/" />
     ) : (
       <>
         <div className="hero is-primary ">

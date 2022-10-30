@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Routes , Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
@@ -34,7 +34,7 @@ export default class App extends Component {
 
   login = async (email, password) => {
     const res = await axios.post(
-      'http://localhost:3000/login',
+      'http://localhost:3001/login',
       { email, password },
     ).catch((res) => {
       return { status: 401, message: 'Unauthorized' }
@@ -188,13 +188,13 @@ export default class App extends Component {
                 )}
               </div>
             </nav>
-            <Routes>
+            <Switch>
               <Route exact path="/" component={ProductList} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/cart" component={Cart} />
               <Route exact path="/add-product" component={AddProduct} />
               <Route exact path="/products" component={ProductList} />
-            </Routes>
+            </Switch>
           </div>
         </Router>
       </Context.Provider>

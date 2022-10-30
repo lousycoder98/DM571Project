@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import withContext from "../withContext";
 
 class Login extends Component {
@@ -74,7 +74,7 @@ class Login extends Component {
         </form>
       </>
     ) : (
-      <Navigate to="/products" />
+      <Redirect to="/products" />
     );
   }
 }
