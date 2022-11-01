@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Routes , Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
@@ -34,7 +34,7 @@ export default class App extends Component {
 
   login = async (email, password) => {
     const res = await axios.post(
-      'http://localhost:3000/login',
+      'http://localhost:3001/login',
       { email, password },
     ).catch((res) => {
       return { status: 401, message: 'Unauthorized' }
@@ -132,7 +132,7 @@ export default class App extends Component {
           checkout: this.checkout
         }}
       >
-        <Router ref={this.routerRef}>
+        <Router innerRef={this.routerRef}>
         <div className="App">
           <nav
             className="navbar container"
@@ -140,10 +140,10 @@ export default class App extends Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand">
-              <b className="navbar-item is-size-4 ">ecommerce</b>
+              <b className="navbar-item is-size-4 ">mockapp</b>
               <label
                 role="button"
-                class="navbar-burger burger"
+                className="navbar-burger burger"
                 aria-label="menu"
                 aria-expanded="false"
                 data-target="navbarBasicExample"
@@ -189,11 +189,11 @@ export default class App extends Component {
               </div>
             </nav>
             <Routes>
-              <Route exact path="/" component={ProductList} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/cart" component={Cart} />
-              <Route exact path="/add-product" component={AddProduct} />
-              <Route exact path="/products" component={ProductList} />
+              <Route exact path="/" element={ProductList} />
+              <Route exact path="/login" element={Login} />
+              <Route exact path="/cart" element={Cart} />
+              <Route exact path="/add-product" element={AddProduct} />
+              <Route exact path="/products" element={ProductList} />
             </Routes>
           </div>
         </Router>
