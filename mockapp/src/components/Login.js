@@ -23,7 +23,7 @@ class Login extends Component {
     this.props.context.login(username, password)
       .then((loggedIn) => {
         if (!loggedIn) {
-          this.setState({ error: "Invalid Credentails" });
+          this.setState({ error: "Invalid Credentials" });
         }
       })
   };
@@ -33,7 +33,7 @@ class Login extends Component {
       <>
         <div className="hero is-link is-small">
           <div className="hero-body container">
-            <h6 className="title">Login</h6>
+            <h4 className="title">Login</h4>
           </div>
         </div>
         <br />
@@ -42,7 +42,7 @@ class Login extends Component {
           <div className="columns is-desktop is-centered">
             <div className="column is-one-third">
               <div className="field">
-                <label className="label">Email / Username: </label>
+                <label className="label">Email: </label>
                 <input
                   className="input"
                   type="email"
@@ -62,9 +62,9 @@ class Login extends Component {
               {this.state.error && (
                 <div className="has-text-danger">{this.state.error}</div>
               )}
-              <div className="field is-clearfix">
+              <div className="field">
                 <button
-                  className="button is-black is-outlined is-pulled-right is-clearfix"
+                  className="button is-black is-outlined is-pulled-right"
                 >
                   Submit
                 </button>

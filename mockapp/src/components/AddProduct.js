@@ -58,9 +58,9 @@ class AddProduct extends Component {
       <Navigate to="/" />
     ) : (
       <>
-        <div className="hero is-primary ">
+        <div className="hero is-link is-small ">
           <div className="hero-body container">
-            <h4 className="title">Add Product</h4>
+            <h6 className="title">Enter Product Details</h6>
           </div>
         </div>
         <br />

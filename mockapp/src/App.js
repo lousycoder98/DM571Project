@@ -164,7 +164,7 @@ export default class App extends Component{
                     Products
                   </Link>
                   {this.state.user && this.state.user.accessLevel < 1 && (
-                    <Link to="/edit product" className="navbar-item">
+                    <Link to="/add-product" className="navbar-item">
                       Add Product
                     </Link>
                   )}
