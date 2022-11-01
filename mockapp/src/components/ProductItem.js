@@ -3,11 +3,11 @@ import React from "react";
 const ProductItem = props => {
   const { product } = props;
   return (
-    <div className=" column is-half">
+    <div className=" column is-full is-narrow">
       <div className="box">
         <div className="media">
           <div className="media-left">
-            <figure className="image is-64x64">
+            <figure className="image is-128x128">
               <img
                 src="https://bulma.io/images/placeholders/128x128.png"
                 alt={product.shortDesc}
@@ -21,9 +21,9 @@ const ProductItem = props => {
             </b>
             <div>{product.shortDesc}</div>
             {product.stock > 0 ? (
-              <small>{product.stock + " Available"}</small>
+              <large>{product.stock + " Available"}</large>
             ) : (
-              <small className="has-text-danger">Out Of Stock</small>
+              <large className="has-text-danger">Out Of Stock</large>
             )}
             <div className="is-clearfix">
               <button

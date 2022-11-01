@@ -31,18 +31,18 @@ class Login extends Component {
   render() {
     return !this.props.context.user ? (
       <>
-        <div className="hero is-primary ">
+        <div className="hero is-link is-small">
           <div className="hero-body container">
-            <h4 className="title">Login</h4>
+            <h6 className="title">Login</h6>
           </div>
         </div>
         <br />
         <br />
         <form onSubmit={this.login}>
-          <div className="columns is-mobile is-centered">
+          <div className="columns is-desktop is-centered">
             <div className="column is-one-third">
               <div className="field">
-                <label className="label">Email: </label>
+                <label className="label">Email / Username: </label>
                 <input
                   className="input"
                   type="email"
@@ -64,7 +64,7 @@ class Login extends Component {
               )}
               <div className="field is-clearfix">
                 <button
-                  className="button is-primary is-outlined is-pulled-right"
+                  className="button is-black is-outlined is-pulled-right is-clearfix"
                 >
                   Submit
                 </button>

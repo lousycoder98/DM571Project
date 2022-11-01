@@ -7,9 +7,9 @@ const ProductList = props => {
 
   return (
     <>
-      <div className="hero is-primary">
-        <div className="hero-body container">
-          <h4 className="title">Our Products</h4>
+      <div className="hero is-link is-small">
+        <div className="hero-body">
+          <h6 className="title">Our Products</h6>
         </div>
       </div>
       <br />

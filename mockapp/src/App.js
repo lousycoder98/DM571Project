@@ -140,7 +140,7 @@ export default class App extends Component{
               aria-label="main navigation"
             >
               <div className="navbar-brand">
-                <b className="navbar-item is-size-4 ">mockapp</b>
+                <b className="navbar-item is-size-8 ">mockapp</b>
                 <label
                   role="button"
                   className="navbar-burger burger"
@@ -164,7 +164,7 @@ export default class App extends Component{
                     Products
                   </Link>
                   {this.state.user && this.state.user.accessLevel < 1 && (
-                    <Link to="/add-product" className="navbar-item">
+                    <Link to="/edit product" className="navbar-item">
                       Add Product
                     </Link>
                   )}
@@ -172,7 +172,7 @@ export default class App extends Component{
                     Cart
                     <span
                       className="tag is-primary"
-                      style={{ marginLeft: "5px" }}
+                      style={{ marginLeft: "3px" }}
                     >
                       { Object.keys(this.state.cart).length }
                     </span>
