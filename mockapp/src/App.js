@@ -140,7 +140,7 @@ export default class App extends Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand">
-              <b className="navbar-item is-size-4 ">ecommerce</b>
+              <b className="navbar-item is-size-4 ">mockapp</b>
               <label
                 role="button"
                 className="navbar-burger burger"
