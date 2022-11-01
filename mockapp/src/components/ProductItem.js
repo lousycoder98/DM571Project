@@ -17,7 +17,7 @@ const ProductItem = props => {
           <div className="media-content">
             <b style={{ textTransform: "capitalize" }}>
               {product.name}{" "}
-              <span className="tag is-primary">${product.price}</span>
+              <span className="tag is-light is-clearfix">${product.price}</span>
             </b>
             <div>{product.shortDesc}</div>
             {product.stock > 0 ? (
@@ -27,7 +27,7 @@ const ProductItem = props => {
             )}
             <div className="is-clearfix">
               <button
-                className="button is-small is-outlined is-primary   is-pulled-right"
+                className="button is-small is-outlined is-primary is-pulled-right"
                 onClick={() =>
                   props.addToCart({
                     id: product.name,

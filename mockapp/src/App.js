@@ -143,7 +143,7 @@ export default class App extends Component{
                 <b className="navbar-item is-size-8 ">mockapp</b>
                 <label
                   role="button"
-                  className="navbar-burger burger"
+                  className="navbar-brand menu"
                   aria-label="menu"
                   aria-expanded="false"
                   data-target="navbarBasicExample"
@@ -171,8 +171,8 @@ export default class App extends Component{
                   <Link to="/cart" className="navbar-item">
                     Cart
                     <span
-                      className="tag is-primary"
-                      style={{ marginLeft: "3px" }}
+                      className="tag is-light"
+                      style={{ marginLeft: "6px" }}
                     >
                       { Object.keys(this.state.cart).length }
                     </span>
