@@ -30,8 +30,13 @@ class Register extends  Component {
             );
             this.setState(
                 { flash: { status: 'is-success', msg: 'User created successfully' }}
-            )
-
+            );
+        } else{
+            this.setState(
+                { flash: { status: 'is-danger', msg: 'User not created successfully' }}
+            );
         }
-    }
+    };
+
+    
 }
