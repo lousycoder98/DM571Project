@@ -7,9 +7,9 @@ const Cart = props => {
   const cartKeys = Object.keys(cart || {});
   return (
     <>
-      <div className="hero is-primary">
-        <div className="hero-body container">
-          <h4 className="title">My Cart</h4>
+      <div className="hero is-link is-small">
+        <div className="hero-body container is-flex">
+          <h4 className="title is-spaced">My Cart</h4>
         </div>
       </div>
       <br />
@@ -43,8 +43,8 @@ const Cart = props => {
             </div>
           </div>
         ) : (
-          <div className="column">
-            <div className="title has-text-grey-light">No item in cart!</div>
+          <div className="column is-clearfix is-desktop is-centered">
+            <div className="title has-text-black-ter">No item in cart!</div>
           </div>
         )}
       </div>
