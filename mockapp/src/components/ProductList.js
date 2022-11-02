@@ -8,7 +8,7 @@ const ProductList = props => {
   return (
     <>
       <div className="hero is-link is-small">
-        <div className="hero-body">
+        <div className="hero-body container">
           <h6 className="title">Our Products</h6>
         </div>
       </div>

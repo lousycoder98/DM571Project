@@ -1,4 +1,5 @@
 import React from "react";
+import MyImage from "./60097550.webp"
 
 const ProductItem = props => {
   const { product } = props;
@@ -9,7 +10,7 @@ const ProductItem = props => {
           <div className="media-left">
             <figure className="image is-128x128">
               <img
-                src="https://bulma.io/images/placeholders/128x128.png"
+                src={MyImage}
                 alt={product.shortDesc}
               />
             </figure>
