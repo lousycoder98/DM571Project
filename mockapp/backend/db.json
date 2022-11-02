@@ -11,12 +11,11 @@
       "id": 2
     }
   ],
-
   "products": [
     {
       "id": "pota1",
       "name": "Pot from Supplier A",
-      "stock": 5,
+      "stock": 4,
       "price": 50,
       "shortDesc": "Non Stick Frying Pan"
     }
