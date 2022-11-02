@@ -9,7 +9,7 @@ const CartItem = props => {
       <div className="box">
         <div className="media">
           <div className="media-left">
-            <figure className="image is-128x128">
+            <figure className="image is-64x64">
               <img
                 src="https://bulma.io/images/placeholders/128x128.png"
                 alt={product.shortDesc}
@@ -26,8 +26,7 @@ const CartItem = props => {
           </div>
           <div
             className="media-right"
-            onClick={() => props.removeFromCart(cartKey)}
-          >
+            onClick={() => props.removeFromCart(cartKey)}>
             <span className="delete is-large"></span>
           </div>
         </div>
