@@ -30,14 +30,15 @@ class Register extends  Component {
                 {
                     email,
                     password,
-                    id,
                 },
                 () => this.setState(initState)
             );
+            
             this.setState(
                 { flash: { status: 'is-success', msg: 'User created successfully' }}
             );
-        } else{
+            
+            } else{
             this.setState(
                 { flash: { status: 'is-danger', msg: 'User not created successfully' }}
             );
@@ -49,12 +50,12 @@ class Register extends  Component {
     render(){
         const { email, password } = this.state;
 
-        return this.props.context.user ? (
-            <Navigate to="/login" />) : (
+        return !this.props.context.user ? (
+            <Navigate to="/" />) : (
             <>
                 <div className="hero is-link is-small">
                     <div className="hero-body container">
-                        <h4 className="title">Create User</h4>
+                        <h4 className="title">Create User </h4>
                     </div>
                 </div>
                 <br />

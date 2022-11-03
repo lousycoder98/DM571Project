@@ -39,6 +39,11 @@
       "email": "huf@jidvsd.com",
       "password": "$2a$10$XKr4x4nWpLw9bNQJQTKkUOLXJYIPZJY9P7btPSnagFhNPuuBG89E2",
       "id": 0.5659705799186454
+    },
+    {
+      "email": "test@email.comfdf",
+      "password": "$2a$10$w87h0QO9Rr5Y3J7mLiQPvuMZo1NCOqSi8Ye7sckzr4.qygw66DvWy",
+      "id": 0.5472449852652468
     }
   ],
   "products": [
@@ -55,6 +60,13 @@
       "price": "50",
       "stock": "5",
       "shortDesc": "pot from b"
+    },
+    {
+      "id": "fbmoe03mlbla1apbat",
+      "name": "fdf",
+      "price": "32",
+      "stock": "234",
+      "shortDesc": "fdsfd"
     }
   ]
 }

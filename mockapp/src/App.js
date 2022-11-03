@@ -17,6 +17,7 @@ export default class App extends Component{
     this.state = {
       user: null,
       cart: {},
+      users: [],
       products: []
     };
     this.routerRef = React.createRef();
@@ -27,10 +28,11 @@ export default class App extends Component{
     let cart = localStorage.getItem("cart");
 
     const products = await axios.get('http://localhost:3001/products');
+    const users = await axios.get('http://localhost:3001/users');
     user = user ? JSON.parse(user) : null;
     cart = cart? JSON.parse(cart) : {};
 
-    this.setState({ user,  products: products.data, cart });
+    this.setState({ user, users: users.data, products: products.data, cart });
   }
 
   login = async (email, password) => {
@@ -173,11 +175,13 @@ export default class App extends Component{
                   <Link to="/products" className="navbar-item">
                     Products
                   </Link>
+
                   {this.state.user && this.state.user.accessLevel < 1 && (
                     <Link to="/add-product" className="navbar-item">
                       Add Product
                     </Link>
                   )}
+
                   <Link to="/cart" className="navbar-item">
                     Cart
                     <span
@@ -187,6 +191,7 @@ export default class App extends Component{
                       { Object.keys(this.state.cart).length }
                     </span>
                   </Link>
+
 
                   <Link to="/register" className="navbar-item">
                       Register
