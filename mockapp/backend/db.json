@@ -29,6 +29,16 @@
       "email": "hello@gmail.com",
       "password": "$2a$10$EWeyxpEgLtZ54diwpvL0QeZmp00NhFL.xwItR4.WNmgtoMm5vtIAS",
       "id": 0.10261462886051187
+    },
+    {
+      "email": "hello@gmail.comv",
+      "password": "$2a$10$qy7omPuFy6azFyo9Tj6cAe7JEE9YvLd5Q4dpct0L54IgJJuJnDMiu",
+      "id": 0.7468106369419005
+    },
+    {
+      "email": "huf@jidvsd.com",
+      "password": "$2a$10$XKr4x4nWpLw9bNQJQTKkUOLXJYIPZJY9P7btPSnagFhNPuuBG89E2",
+      "id": 0.5659705799186454
     }
   ],
   "products": [

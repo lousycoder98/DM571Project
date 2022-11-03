@@ -190,10 +190,7 @@ export default class App extends Component{
 
                   <Link to="/register" className="navbar-item">
                       Register
-                      <span
-                        className="tag is-light"
-                        style={{ marginLeft: "6px" }}>
-                      </span>
+
                   </Link>
 
                   {!this.state.user ? (

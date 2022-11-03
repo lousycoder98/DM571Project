@@ -50,7 +50,7 @@ class Register extends  Component {
         const { email, password } = this.state;
 
         return this.props.context.user ? (
-            <Navigate to="/register" />) : (
+            <Navigate to="/login" />) : (
             <>
                 <div className="hero is-link is-small">
                     <div className="hero-body container">
