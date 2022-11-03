@@ -49,6 +49,16 @@
       "email": "fdfadf@gmasil.com",
       "password": "$2a$10$zE3U1krWt3pvcuLkGHh9Bet06pl3iTFQRwZ.OYzQxSdvr/SbwT6PK",
       "id": 0.23975526616973908
+    },
+    {
+      "email": "dsdsaddasdasdasdass@hotmail.com",
+      "password": "$2a$10$4m4AWXaXel6Ss/iK/AMHCuDTJIczuLYS8qsbpadw6HdKHSwQWteMe",
+      "id": 0.6010386123050266
+    },
+    {
+      "email": "test123@email.com",
+      "password": "$2a$10$IAOKRGnJd.Q3tKad9wQIhO8soblgqB93P3vdOt7ICdRPV7eQW/7ZS",
+      "id": 0.04713665614390594
     }
   ],
   "products": [
