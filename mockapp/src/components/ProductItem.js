@@ -9,10 +9,7 @@ const ProductItem = props => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-128x128">
-              <img
-                src={MyImage}
-                alt={product.shortDesc}
-              />
+              <img src={MyImage} alt={product.shortDesc}/>
             </figure>
           </div>
           <div className="media-content">

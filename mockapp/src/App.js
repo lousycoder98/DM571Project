@@ -60,6 +60,7 @@ export default class App extends Component{
     e.preventDefault();
     this.setState({ user: null });
     localStorage.removeItem("user");
+    // window.location.reload(false);
   };
 
   addProduct = (product, callback) => {
@@ -80,6 +81,15 @@ export default class App extends Component{
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     this.setState({ cart });
+  };
+
+  handleUpdateCart = (cartItemId, quantity) => {
+    let cart = this.state.cart;
+    if ((quantity > 0) && (quantity <= cart[cartItemId].product.stock)){
+      cart[cartItemId].amount = quantity
+      console.log(cart[cartItemId].amount)
+    }
+    this.setState({cart})
   };
 
   removeFromCart = cartItemId => {
@@ -128,6 +138,7 @@ export default class App extends Component{
             addToCart: this.addToCart,
             login: this.login,
             addProduct: this.addProduct,
+            handleUpdateCart: this.handleUpdateCart,
             clearCart: this.clearCart,
             checkout: this.checkout
           }}

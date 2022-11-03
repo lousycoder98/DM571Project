@@ -24,6 +24,10 @@ const CartItem = props => {
             <div>{product.shortDesc}</div>
             <small>{`${amount} in cart`}</small>
           </div>
+          <div className="buttons" >
+            <button className="button is-primary is-small" onClick={() => props.handleUpdateCart(cartKey, amount-1) /*{console.log(props)}*/}>-</button>
+            <button className="button is-primary is-small" onClick={() => props.handleUpdateCart(cartKey, amount+1) /*{console.log(props)}*/}>+</button>
+          </div>
           <div
             className="media-right"
             onClick={() => props.removeFromCart(cartKey)}>

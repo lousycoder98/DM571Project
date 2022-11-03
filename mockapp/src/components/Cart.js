@@ -22,6 +22,7 @@ const Cart = props => {
                 key={key}
                 cartItem={cart[key]}
                 removeFromCart={props.context.removeFromCart}
+                handleUpdateCart={props.context.handleUpdateCart}
               />
             ))}
             <div className="column is-12 is-clearfix">
