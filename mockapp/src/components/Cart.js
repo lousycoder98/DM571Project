@@ -5,6 +5,16 @@ import CartItem from "./CartItem";
 const Cart = props => {
   const { cart } = props.context;
   const cartKeys = Object.keys(cart || {});
+
+  const total = () => {
+    let sum = 0;
+    cartKeys.forEach(item => {
+      console.log(item, cart[item].amount, cart[item].product.price)
+      sum += cart[item].amount * cart[item].product.price;
+    });
+    return sum;
+  }
+
   return (
     <>
       <div className="hero is-link is-small">
@@ -25,19 +35,16 @@ const Cart = props => {
                 handleUpdateCart={props.context.handleUpdateCart}
               />
             ))}
+            <div className="column" >
+                <p>{`Total: ${total()}`}</p>
+              </div>
             <div className="column is-12 is-clearfix">
               <br />
-              <div className="is-pulled-right">
-                <button
-                  onClick={props.context.clearCart}
-                  className="button is-warning "
-                >
+              <div className="buttons is-pulled-right">
+                <button onClick={props.context.clearCart} className="button is-warning ">
                   Clear cart
-                </button>{" "}
-                <button
-                  className="button is-success"
-                  onClick={props.context.checkout}
-                >
+                </button>
+                <button className="button is-success" onClick={props.context.checkout}>
                   Checkout
                 </button>
               </div>
