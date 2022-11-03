@@ -195,7 +195,6 @@ export default class App extends Component{
 
                   <Link to="/register" className="navbar-item">
                       Register
-
                   </Link>
 
                   {!this.state.user ? (

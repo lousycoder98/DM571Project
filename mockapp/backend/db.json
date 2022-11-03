@@ -44,6 +44,11 @@
       "email": "test@email.comfdf",
       "password": "$2a$10$w87h0QO9Rr5Y3J7mLiQPvuMZo1NCOqSi8Ye7sckzr4.qygw66DvWy",
       "id": 0.5472449852652468
+    },
+    {
+      "email": "fdfadf@gmasil.com",
+      "password": "$2a$10$zE3U1krWt3pvcuLkGHh9Bet06pl3iTFQRwZ.OYzQxSdvr/SbwT6PK",
+      "id": 0.23975526616973908
     }
   ],
   "products": [
