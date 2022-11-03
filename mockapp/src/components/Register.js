@@ -44,6 +44,7 @@ class Register extends  Component {
         const { email, password } = this.state;
 
         return !this.props.context.user ? (
+            <Navigate to="/login" />) : (
             <>
                 <div className="hero is-link is-small">
                     <div className="hero-body container">
@@ -57,14 +58,49 @@ class Register extends  Component {
                         <div className="column is one-third">
                             <div className="field">
                                 <label className="label">Email:</label>
+                                <input
+                                    className="input"
+                                    type="email"
+                                    name="username"
+                                    value={email}
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
+                            <div className="field">
+                                <label className="label">Password: </label>
+                                <input
+                                    className="input"
+                                    type="password"
+                                    name="password"
+                                    value={password}
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
+                            {this.state.flash && (
+                                <div className={`notification ${this.state.flash.status}`}>
+                                    {this.state.flash.msg}
+                                </div>    
+                            )}
+                            <div className="field is-clearfix">
+                                <button
+                                    className="button is-primary is-outlined is-pulled-right"
+                                    type="submit"
+                                    onClick={this.save}
+                                >
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </div>
                 </form>
             </>
-        )
+        );
 
         
     }
 
 }
+
+export default withContext(Register);
