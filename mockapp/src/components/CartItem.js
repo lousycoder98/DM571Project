@@ -22,11 +22,11 @@ const CartItem = props => {
               <span className="tag is-primary">${product.price}</span>
             </b>
             <div>{product.shortDesc}</div>
-            <small>{`${amount} in cart`}</small>
-          </div>
-          <div className="buttons" >
-            <button className="button is-primary is-small" onClick={() => props.handleUpdateCart(cartKey, amount-1) /*{console.log(props)}*/}>-</button>
-            <button className="button is-primary is-small" onClick={() => props.handleUpdateCart(cartKey, amount+1) /*{console.log(props)}*/}>+</button>
+            <div className="mt-1">
+              <button className="button is-primary is-small is-rounded" onClick={() => props.handleUpdateCart(cartKey, amount-1) /*{console.log(props)}*/}>-</button>
+              <small className="m-2">{`${amount} in cart`}</small>
+              <button className="button is-primary is-small is-rounded" onClick={() => props.handleUpdateCart(cartKey, amount+1) /*{console.log(props)}*/}>+</button>
+            </div>
           </div>
           <div
             className="media-right"

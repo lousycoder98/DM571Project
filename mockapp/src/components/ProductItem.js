@@ -4,7 +4,7 @@ import MyImage from "./60097550.webp"
 const ProductItem = props => {
   const { product } = props;
   return (
-    <div className=" column is-full is-narrow">
+    <div className=" column is-one-thirds is-narrow">
       <div className="box">
         <div className="media">
           <div className="media-left">
