@@ -7,6 +7,7 @@ import AddProduct from './components/AddProduct';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import ProductList from './components/ProductList';
+import Register from './components/Register';
 
 import Context from "./Context";
 
@@ -68,6 +69,14 @@ export default class App extends Component{
     this.setState({ products }, () => callback && callback());
   };
 
+
+  addUser = (user, callback) => {
+    let users = this.state.users.slice();
+    users.push(user);
+    this.setState({ users }, () => callback && callback());
+  };
+
+
   addToCart = cartItem => {
     let cart = this.state.cart;
     if (cart[cartItem.id]) {
@@ -127,6 +136,7 @@ export default class App extends Component{
             removeFromCart: this.removeFromCart,
             addToCart: this.addToCart,
             login: this.login,
+            addUser: this.addUser,
             addProduct: this.addProduct,
             clearCart: this.clearCart,
             checkout: this.checkout
@@ -177,6 +187,15 @@ export default class App extends Component{
                       { Object.keys(this.state.cart).length }
                     </span>
                   </Link>
+
+                  <Link to="/register" className="navbar-item">
+                      Register
+                      <span
+                        className="tag is-light"
+                        style={{ marginLeft: "6px" }}>
+                      </span>
+                  </Link>
+
                   {!this.state.user ? (
                     <Link to="/login" className="navbar-item">
                       Login
@@ -192,6 +211,7 @@ export default class App extends Component{
                 <Route exact path="/" element={<ProductList/>} />
                 <Route exact path="/login" element={<Login/>} />
                 <Route exact path="/cart" element={<Cart/>} />
+                <Route exact path="/register" element={<Register/>} />
                 <Route exact path="/add-product" element={<AddProduct/>} />
                 <Route exact path="/products" element={<ProductList/>} />
               </Routes>

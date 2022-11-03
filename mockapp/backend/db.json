@@ -9,6 +9,26 @@
       "email": "admin@example.com",
       "password": "$2a$10$w8qB40MdYkMs3dgGGf0Pu.xxVOOzWdZ5/Nrkleo3Gqc88PF/OQhOG",
       "id": 2
+    },
+    {
+      "email": "test@example.com",
+      "password": "$2a$10$frRg2l/v1D/bwDMe/rfMlukLepC4V7E65iJxx8QLp/6CZqygE7xDy",
+      "id": 3
+    },
+    {
+      "email": "cxiangyu@gmail.com",
+      "password": "$2a$10$UBHT94PdEHdpp9rMjGpSNOfm5WBcZLjRlElIB4lWOPpiTqaBPH542",
+      "id": 4
+    },
+    {
+      "email": "test@email.com",
+      "password": "$2a$10$WqdvueTXToGJ8oop9Obdb.G/3/.ObZ8c0C06LkY7nLFLISMElB9rW",
+      "id": 0.10728621027563934
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$EWeyxpEgLtZ54diwpvL0QeZmp00NhFL.xwItR4.WNmgtoMm5vtIAS",
+      "id": 0.10261462886051187
     }
   ],
   "products": [

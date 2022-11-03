@@ -21,10 +21,16 @@ class Register extends  Component {
         if (email && password) {
             const id = Math.random();
 
+            await axios.post(
+                'http://localhost:3001/users',
+                { email, password, id },
+            )
+
             this.props.context.addUser(
                 {
                     email,
                     password,
+                    id,
                 },
                 () => this.setState(initState)
             );
@@ -43,8 +49,8 @@ class Register extends  Component {
     render(){
         const { email, password } = this.state;
 
-        return !this.props.context.user ? (
-            <Navigate to="/login" />) : (
+        return this.props.context.user ? (
+            <Navigate to="/register" />) : (
             <>
                 <div className="hero is-link is-small">
                     <div className="hero-body container">
@@ -55,13 +61,13 @@ class Register extends  Component {
                 <br />
                 <form onSubmit={this.save}>
                     <div className="columns is-mobile is-centered">
-                        <div className="column is one-third">
+                        <div className="column is-one-third">
                             <div className="field">
-                                <label className="label">Email:</label>
+                                <label className="label">Email: </label>
                                 <input
                                     className="input"
                                     type="email"
-                                    name="username"
+                                    name="email"
                                     value={email}
                                     onChange={this.handleChange}
                                     required
