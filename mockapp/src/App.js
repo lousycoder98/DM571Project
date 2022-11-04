@@ -7,6 +7,7 @@ import AddProduct from './components/AddProduct';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import ProductList from './components/ProductList';
+import Register from './components/Register';
 
 import Context from "./Context";
 
@@ -16,6 +17,7 @@ export default class App extends Component{
     this.state = {
       user: null,
       cart: {},
+      users: [],
       products: []
     };
     this.routerRef = React.createRef();
@@ -26,10 +28,11 @@ export default class App extends Component{
     let cart = localStorage.getItem("cart");
 
     const products = await axios.get('http://localhost:3001/products');
+    const users = await axios.get('http://localhost:3001/users');
     user = user ? JSON.parse(user) : null;
     cart = cart? JSON.parse(cart) : {};
 
-    this.setState({ user,  products: products.data, cart });
+    this.setState({ user, users: users.data, products: products.data, cart });
   }
 
   login = async (email, password) => {
@@ -68,6 +71,14 @@ export default class App extends Component{
     products.push(product);
     this.setState({ products }, () => callback && callback());
   };
+
+
+  addUser = (user, callback) => {
+    let users = this.state.users.slice();
+    users.push(user);
+    this.setState({ users }, () => callback && callback());
+  };
+
 
   addToCart = cartItem => {
     let cart = this.state.cart;
@@ -137,6 +148,7 @@ export default class App extends Component{
             removeFromCart: this.removeFromCart,
             addToCart: this.addToCart,
             login: this.login,
+            addUser: this.addUser,
             addProduct: this.addProduct,
             handleUpdateCart: this.handleUpdateCart,
             clearCart: this.clearCart,
@@ -174,11 +186,13 @@ export default class App extends Component{
                   <Link to="/products" className="navbar-item">
                     Products
                   </Link>
+
                   {this.state.user && this.state.user.accessLevel < 1 && (
                     <Link to="/add-product" className="navbar-item">
                       Add Product
                     </Link>
                   )}
+
                   <Link to="/cart" className="navbar-item">
                     Cart
                     <span
@@ -188,6 +202,12 @@ export default class App extends Component{
                       { Object.keys(this.state.cart).length }
                     </span>
                   </Link>
+
+
+                  <Link to="/register" className="navbar-item">
+                      Register
+                  </Link>
+
                   {!this.state.user ? (
                     <Link to="/login" className="navbar-item">
                       Login
@@ -203,6 +223,7 @@ export default class App extends Component{
                 <Route exact path="/" element={<ProductList/>} />
                 <Route exact path="/login" element={<Login/>} />
                 <Route exact path="/cart" element={<Cart/>} />
+                <Route exact path="/register" element={<Register/>} />
                 <Route exact path="/add-product" element={<AddProduct/>} />
                 <Route exact path="/products" element={<ProductList/>} />
               </Routes>

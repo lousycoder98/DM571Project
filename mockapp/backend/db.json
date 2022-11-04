@@ -9,6 +9,56 @@
       "email": "admin@example.com",
       "password": "$2a$10$w8qB40MdYkMs3dgGGf0Pu.xxVOOzWdZ5/Nrkleo3Gqc88PF/OQhOG",
       "id": 2
+    },
+    {
+      "email": "test@example.com",
+      "password": "$2a$10$frRg2l/v1D/bwDMe/rfMlukLepC4V7E65iJxx8QLp/6CZqygE7xDy",
+      "id": 3
+    },
+    {
+      "email": "cxiangyu@gmail.com",
+      "password": "$2a$10$UBHT94PdEHdpp9rMjGpSNOfm5WBcZLjRlElIB4lWOPpiTqaBPH542",
+      "id": 4
+    },
+    {
+      "email": "test@email.com",
+      "password": "$2a$10$WqdvueTXToGJ8oop9Obdb.G/3/.ObZ8c0C06LkY7nLFLISMElB9rW",
+      "id": 0.10728621027563934
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$EWeyxpEgLtZ54diwpvL0QeZmp00NhFL.xwItR4.WNmgtoMm5vtIAS",
+      "id": 0.10261462886051187
+    },
+    {
+      "email": "hello@gmail.comv",
+      "password": "$2a$10$qy7omPuFy6azFyo9Tj6cAe7JEE9YvLd5Q4dpct0L54IgJJuJnDMiu",
+      "id": 0.7468106369419005
+    },
+    {
+      "email": "huf@jidvsd.com",
+      "password": "$2a$10$XKr4x4nWpLw9bNQJQTKkUOLXJYIPZJY9P7btPSnagFhNPuuBG89E2",
+      "id": 0.5659705799186454
+    },
+    {
+      "email": "test@email.comfdf",
+      "password": "$2a$10$w87h0QO9Rr5Y3J7mLiQPvuMZo1NCOqSi8Ye7sckzr4.qygw66DvWy",
+      "id": 0.5472449852652468
+    },
+    {
+      "email": "fdfadf@gmasil.com",
+      "password": "$2a$10$zE3U1krWt3pvcuLkGHh9Bet06pl3iTFQRwZ.OYzQxSdvr/SbwT6PK",
+      "id": 0.23975526616973908
+    },
+    {
+      "email": "dsdsaddasdasdasdass@hotmail.com",
+      "password": "$2a$10$4m4AWXaXel6Ss/iK/AMHCuDTJIczuLYS8qsbpadw6HdKHSwQWteMe",
+      "id": 0.6010386123050266
+    },
+    {
+      "email": "test123@email.com",
+      "password": "$2a$10$IAOKRGnJd.Q3tKad9wQIhO8soblgqB93P3vdOt7ICdRPV7eQW/7ZS",
+      "id": 0.04713665614390594
     }
   ],
   "products": [
@@ -25,6 +75,13 @@
       "price": 50,
       "stock": 5,
       "shortDesc": "pot from b"
+    },
+    {
+      "id": "fbmoe03mlbla1apbat",
+      "name": "fdf",
+      "price": "32",
+      "stock": "234",
+      "shortDesc": "fdsfd"
     }
   ]
 }
