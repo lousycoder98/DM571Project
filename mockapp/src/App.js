@@ -63,7 +63,6 @@ export default class App extends Component{
     e.preventDefault();
     this.setState({ user: null });
     localStorage.removeItem("user");
-    // window.location.reload(false);
   };
 
   addProduct = (product, callback) => {

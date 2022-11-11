@@ -3,7 +3,7 @@ import ProductItem from "./ProductItem";
 import withContext from "../withContext";
 
 const ProductList = props => {
-  const { products } = props.context;
+  const {products} = props.context;
 
   return (
     <>

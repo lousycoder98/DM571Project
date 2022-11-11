@@ -9,7 +9,6 @@ const Cart = props => {
   const total = () => {
     let sum = 0;
     cartKeys.forEach(item => {
-      console.log(item, cart[item].amount, cart[item].product.price)
       sum += cart[item].amount * cart[item].product.price;
     });
     return sum;
@@ -35,11 +34,11 @@ const Cart = props => {
                 handleUpdateCart={props.context.handleUpdateCart}
               />
             ))}
-            <div className="column" >
-                <p>{`Total: ${total()}`}</p>
-              </div>
             <div className="column is-12 is-clearfix">
               <br />
+              <div className="column" >
+                <p>{`Total: ${total()}`}</p>
+              </div>
               <div className="buttons is-pulled-right">
                 <button onClick={props.context.clearCart} className="button is-warning ">
                   Clear cart

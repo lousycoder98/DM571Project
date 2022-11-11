@@ -11,21 +11,23 @@ class Login extends Component {
     };
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value, error: "" });
-
-  login = (e) => {
+  handleChange = e => this.setState({
+    [e.target.name]: e.target.value,
+    error: "",
+    loggedin: false
+  });
+  
+  onLogin = (e) => {
     e.preventDefault();
-
+    
     const { username, password } = this.state;
     if (!username || !password) {
       return this.setState({ error: "Fill all fields!" });
     }
-    this.props.context.login(username, password)
-      .then((loggedIn) => {
-        if (!loggedIn) {
-          this.setState({ error: "Invalid Credentials" });
-        }
-      })
+    const loggedIn = this.props.context.login(username, password)
+    if (!loggedIn) {
+      this.setState({ error: "Invalid Credentials" });
+    }
   };
 
   render() {
@@ -38,34 +40,34 @@ class Login extends Component {
         </div>
         <br />
         <br />
-        <form onSubmit={this.login}>
+        <form onSubmit={this.onLogin}>
           <div className="columns is-desktop is-centered">
             <div className="column is-one-third">
               <div className="field">
-                <label className="label">Email: </label>
-                <input
-                  className="input"
-                  type="email"
-                  name="username"
-                  onChange={this.handleChange}
-                />
+                <label className="label">Email: 
+                  <input
+                    className="input"
+                    type="email"
+                    name="username"
+                    onChange={this.handleChange}
+                  />
+                </label>
               </div>
               <div className="field">
-                <label className="label">Password: </label>
-                <input
-                  className="input"
-                  type="password"
-                  name="password"
-                  onChange={this.handleChange}
-                />
+                <label className="label">Password: 
+                  <input
+                    className="input"
+                    type="password"
+                    name="password"
+                    onChange={this.handleChange}
+                  />
+                </label>
               </div>
               {this.state.error && (
                 <div className="has-text-danger">{this.state.error}</div>
               )}
               <div className="field">
-                <button
-                  className="button is-black is-outlined is-pulled-right"
-                >
+                <button className="button is-black is-outlined is-pulled-right">
                   Submit
                 </button>
               </div>
